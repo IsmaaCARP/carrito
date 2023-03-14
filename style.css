@@ -1,0 +1,57 @@
+#listaDeProductos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#listaDeProductos div {
+  margin: 1rem;
+  padding: 0.5rem;
+  border: 1px solid black;
+  text-align: center;
+}
+
+table,
+table tr th,
+table tr td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 0.5rem;
+}
+
+.container {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin: 10px;
+  background-color: aliceblue;
+}
+
+table,
+table tr th,
+table tr td {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin: 10px;
+  background-color: aliceblue;
+    
+}
+
+body {
+    display:flex;
+    gap: 1rem;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    
+}
+
+h2 {
+    color: aliceblue;
+    
+}
+   
