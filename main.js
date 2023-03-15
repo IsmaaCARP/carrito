@@ -13,10 +13,11 @@ let carrito = [];
 
 class Producto {
 
-  constructor (nombre, precio, stock) {
+  constructor (nombre, precio, stock, img) {
       this.nombre = nombre;
       this.precio = precio;
       this.stock = stock;
+      this.img = img;
   }
 
   descontarStock () {
@@ -26,10 +27,11 @@ class Producto {
 
 class ProductoCarrito {
 
-  constructor (nombre, precio, cantidad = 1) {
+  constructor (nombre, precio, img, cantidad = 1) {
       this.nombre = nombre;
       this.precio = precio;
       this.cantidad = cantidad;
+      this.img = img;
   }
 
   sumarCantidad () {
@@ -160,19 +162,24 @@ function renderizarListaDeProductos () {
   for(const productoDeLista of productos) {
 
       
-      const div = document.createElement("div");
+    const div = document.createElement("div").classList.add('card-deck');
 
       
-      const nombre = document.createElement("h3");
+    const nombre = document.createElement("h5").classList.add('card-title');
       nombre.innerText = productoDeLista.nombre;
 
       
-      const precio = document.createElement("h4");
+      const precio = document.createElement("p").classList.add('card-text');
       precio.innerText = `$${productoDeLista.precio}`;
 
       
-      const stock = document.createElement("h4");
+      const stock = document.createElement("p").classList.add('card-text');
       stock.innerText = `Stock: ${productoDeLista.stock}`;
+
+
+    const img = document.createElement('img').classList.add('card-img-top');
+    img.src = productoDeLista.img ;
+
 
       
       const btnAgregarAlCarrito = document.createElement("button");
@@ -185,7 +192,7 @@ function renderizarListaDeProductos () {
           agregarProductoAlCarrito(productoDeLista)});
 
       
-      div.append(nombre, precio, stock, btnAgregarAlCarrito);
+      div.append(nombre, precio, stock, img, btnAgregarAlCarrito);
 
       
       divListaDeProductos.append(div);
@@ -207,10 +214,11 @@ function getProductsOfJSON () {
                   productoJSON.nombre,
                   productoJSON.precio,
                   productoJSON.stock,
+                  productoJSON.img,
               ));
           }
 
-          renderizarListaDeProductos()
+         renderizarListaDeProductos()
     });
 }
 

@@ -2,31 +2,36 @@
   {
     "nombre": "Pc Gama Baja",
     "precio": 250,
-    "stock": 5
+    "stock": 5,
+    "img": "../images/gamabaja.jpg"
   },
 
   {
     "nombre": "Pc Gama Media",
     "precio": 500,
-    "stock": 4
+    "stock": 4,
+    "img": "../images/gamamedia.jpg"
   },
 
   {
     "nombre": "Pc Gama Alta",
     "precio": 750,
-    "stock": 5
+    "stock": 5,
+    "img": "../images/gamaalta.jpg"
   },
 
   {
     "nombre": "Pc Gama Ultra Alta",
     "precio": 1000,
-    "stock": 2
+    "stock": 2,
+    "img": "../images/gamaultra.jpg"
   },
 
   {
     "nombre": "PlayStation 5",
     "precio": 1500,
-    "stock": 4
+    "stock": 4,
+    "img": "../images/ps5.jpg"
   }
 
 ]
