@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
 #listaDeProductos {
   display: flex;
   justify-content: center;
@@ -5,10 +11,12 @@
 }
 
 #listaDeProductos div {
-  margin: 1rem;
-  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
   border: 1px solid black;
-  text-align: center;
+  border-radius: 1rem;
+  background-color: whitesmoke;
+  padding: 2rem;
 }
 
 table,
@@ -20,38 +28,51 @@ table tr td {
 }
 
 .container {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-  margin: 10px;
-  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
 }
 
 table,
 table tr th,
 table tr td {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
+ 
+  margin: 32px 49px 68px 630px;
+  background: aliceblue;
   text-align: center;
-  font-family: arial;
-  margin: 10px;
-  background-color: aliceblue;
-    
+  justify-content: center;
+  justify-items: center;
+  width: 35%; 
+  color: black;
+  font-weight: bold;
 }
 
-body {
-    display:flex;
+.border{
+  padding: 32px 54px;
+  border-radius:22px;  
+}
+
+
+body {    
     gap: 1rem;
     background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-    
-}
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    }
 
 h2 {
     color: aliceblue;
-    
+    justify-self: center;
+    justify-content: center;
+    margin: -26px 49px 125px 858px;
+}
+
+button { 
+  background-color:#4141cc;
+  color: #fff;
+  border:none; 
+  border-radius:10px; 
+  padding:15px;
+  min-height:30px; 
+  min-width: 120px;
 }
    
