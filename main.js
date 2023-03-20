@@ -10,7 +10,9 @@ let productos = [];
 
 let carrito = [];
   
-
+/**
+  * Clases 
+  */
 class Producto {
 
   constructor (nombre, precio, stock) {
@@ -37,7 +39,9 @@ class ProductoCarrito {
   }
 }
 
-// Funciones
+/**
+  * Funciones 
+  */
 
 function calcularTotal () {
 
@@ -63,10 +67,10 @@ function eliminarProducto (productoAEliminar) {
   }
 
   
-  renderizarCarrito();
+  crearCarrito();
 }
 
-function renderizarCarrito () {
+function crearCarrito () {
 
   
   tbodyCarrito.innerHTML = "";
@@ -114,10 +118,10 @@ function productoTieneStock (productoAAgregar) {
 function agregarProductoAlCarrito (productoAAgregar) {
 
   
-  const indiceProductoEncontrado = carrito.findIndex( (productoCarrito) => productoCarrito.nombre === productoAAgregar.nombre);
+  const productoEncontrado = carrito.findIndex( (productoCarrito) => productoCarrito.nombre === productoAAgregar.nombre);
 
   
-  if(indiceProductoEncontrado === -1) {
+  if(productoEncontrado === -1) {
 
       
       carrito.push(
@@ -132,7 +136,7 @@ function agregarProductoAlCarrito (productoAAgregar) {
       if(productoTieneStock(productoAAgregar)) {
 
           
-          carrito[indiceProductoEncontrado].sumarCantidad();
+          carrito[productoEncontrado].sumarCantidad();
 
           productoAAgregar.descontarStock();
 
@@ -147,11 +151,11 @@ function agregarProductoAlCarrito (productoAAgregar) {
   }
 
   
-  renderizarCarrito();
-  renderizarListaDeProductos(productos);
+  crearCarrito();
+  crearListaDeProductos(productos);
 }
 
-function renderizarListaDeProductos () {
+function crearListaDeProductos () {
 
   
   divListaDeProductos.innerHTML = "";
@@ -210,7 +214,7 @@ function getProductsOfJSON () {
               ));
           }
 
-          renderizarListaDeProductos()
+          crearListaDeProductos()
     });
 }
 
